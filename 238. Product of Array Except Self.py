@@ -9,20 +9,21 @@ nums = [1,2,3,4]
 # --- My Solution
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
-        pre = []
-        post = [1] * len(nums)
+        n = len(nums)
+        res = [1] * n
 
         one = 1
-        for num in nums:
-            one *= num
-            pre.append(one)
+        for i in range(n):
+            res[i] = one
+            one *= nums[i]
 
         two = 1
-        for i in range(len(nums) - 1, -1, -1):
+        for i in range(n-1, -1, -1):
+            res[i] *= two
             two *= nums[i]
-            post[i] = two
-
-        return pre, post  
+        
+        return res
+    
 # --- Test
 sol = Solution()
 print(sol.productExceptSelf(nums))

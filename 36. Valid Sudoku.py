@@ -38,6 +38,12 @@ class Solution:
                     return False
                 if val in boxes.get((r//3, c//3), set()):
                     return False
+                # Rookie mistake...
+                rows[r].add(val)
+                cols[c].add(val)
+                if (r//3, c//3) not in boxes:
+                    boxes[(r//3, c//3)] = set()
+                boxes[(r//3, c//3)].add(val)
         return True
 # --- Test 
 sol = Solution()

@@ -22,7 +22,7 @@ class MinStack:
         
     def push(self, val: int) -> None:
         self.stack.append(val)
-        if not self.minStack or val <= self.minStack[-1]:
+        if not self.minStack or val <= self.minStack[-1]: # Checks if minstack is either empty or if val is smaller or the same value as self.minstack 
             self.minStack.append(val)
 
     

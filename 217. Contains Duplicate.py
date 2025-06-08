@@ -8,7 +8,7 @@
 from typing import List
 nums = [1,2,3,1]
 nums2 = [1,2,3,4]
-# --- Solution
+# --- My Solution
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         hs = set() 

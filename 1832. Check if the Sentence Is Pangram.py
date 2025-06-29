@@ -12,10 +12,9 @@ sentence = "qazwsxedcrfvtgbyhnujmikolp"
 # --- My solution
 class Solution:
     def checkIfPangram(self, sentence: str) -> bool:
-        return 26 == 26
+        return len(set(sentence)) == 26
 
 # --- Test 
 sol = Solution()
 print(sol.checkIfPangram(sentence))
 
-# len(set(sentence))

@@ -11,10 +11,7 @@ num = 9876
 # --- My solution
 class Solution:
     def addDigits(self, num: int) -> int:
-        if num == 0:
-            return 0
-        else:
-            return 1 + (num - 1) % 9
+        return 0 if num == 0 else 1 + (num-1) % 9
 # --- Test 
 sol = Solution()
 print(sol.addDigits(num))

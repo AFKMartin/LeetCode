@@ -13,7 +13,7 @@
 # From s[2] = 'b' to s[3] = 'B', there is no change of key as caps lock or shift is not counted.
 # From s[3] = 'B' to s[4] = 'c', there is a change of key.
 # From s[4] = 'c' to s[5] = 'C', there is no change of key as caps lock or shift is not counted.
-s = "aabbcc"
+s = "aabBcC"
 # --- My solution
 class Solution:
     def countKeyChanges(self, s: str) -> int:

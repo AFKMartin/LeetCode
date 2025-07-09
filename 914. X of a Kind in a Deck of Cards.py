@@ -32,8 +32,7 @@ class Solution:
             size = gcd(size, num)
 
         return size > 1
-
-
+# If using math library it gets way simplier, I think.
 # --- Test
 sol = Solution()
 print(sol.hasGroupsSizeX(deck))

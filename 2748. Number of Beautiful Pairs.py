@@ -45,6 +45,7 @@ class Solution:
                     c += 1
         
         return c
+# Runtime 296 ms seems extremely slow, I don't know if there is a faster way.
 # --- Test
 sol = Solution()
 print(sol.countBeautifulPairs(nums))

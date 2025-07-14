@@ -9,7 +9,7 @@ n = 5
 # --- My solution
 class Solution:
     def smallestEvenMultiple(self, n: int) -> int:
-        return 2*n
+        return n if n % 2 == 0 else 2*n
 # --- Test
 sol = Solution()
 print(sol.smallestEvenMultiple(n))

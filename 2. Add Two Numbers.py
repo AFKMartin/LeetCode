@@ -51,7 +51,6 @@ class Solution:
         return res.next
 
 # I'm still bad as this time of problems took me more than I want to admit
-# How is this med dif
 # --- Test
 sol = Solution()
 print(sol.addTwoNumbers(l1, l2))

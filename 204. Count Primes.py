@@ -7,25 +7,21 @@
 # Explanation: There are 4 prime numbers less than 10, they are 2, 3, 5, 7.
 n = 100
 # --- My solution
+# without numpy is super slow, this gave me 1265ms and pass the test, the last version was too slow to do so
 class Solution:
     def countPrimes(self, n: int) -> int:
-        def isPrime(num):
-            if num <= 1:
-                return False
-            if num == 2:
-                return True
-            if num % 2 == 0:
-                return False
-            for j in range(3, int(num**0.5) + 1, 2):
-                if num % j == 0:
-                    return False
-            return True
+        if n <= 2:
+            return 0
         
-        c = 0
-        for i in range(2, n):
-            if isPrime(i):
-                c += 1
-        return c
+        is_prime = [True] * n
+        is_prime[0] = is_prime[1] = False
+        
+        for i in range(2, int(n**0.5) + 1):
+            if is_prime[i]:
+                for j in range(i * i, n, i):
+                    is_prime[j] = False
+        
+        return sum(is_prime)
         
 # --- Test
 sol = Solution()

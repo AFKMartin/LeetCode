@@ -10,7 +10,7 @@
 # Output: 2
 # Explanation: The ray meets receptor 2 the first time it gets reflected back to the left wall.
 p = 6
-q = 5
+q = 4
 # --- My solution
 class Solution:
     def mirrorReflection(self, p: int, q: int) -> int:

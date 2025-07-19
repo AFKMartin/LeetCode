@@ -34,12 +34,15 @@ class Solution:
             return 2
     
 ''' 
-I thought it was like this at first. I will add a comment about this one for myself in the future since it’s not that obvious, and I felt quite dumb with my first idea of the solution. Number theory is beautiful, but geometry really drives me crazy.
+The LCM, in our case, gives the least common "height" or distance where the laser returns to a corner.
+Let m = LCM(p, q) // p -> number of vertical extensions (reflections on horizontal walls)
+Let n = LCM(p, q) // q -> number of horizontal extensions (reflections on vertical walls)
 
-        if m % 2 == 1 and n % 2 == 1:
-            return 0
-        elif m % 2 == 0 and n % 2 == 1:
-            return 1
+- If m is odd and n is odd then the ray hits receptor 1 
+- If m is even and n is odd then the ray hits receptor 0 
+- If n is even → the ray hits receptor 2 (top-left corner), regardless of m...
+
+Makes sense, try drawing it, it actually makes sense but is hard to explain with words.
 '''
         
 # --- Test

@@ -33,7 +33,6 @@ class Solution:
                 new_s.append(str(new_d))
             s = "".join(new_s)
         return s[0] == s[1]
-
 # --- Test
 sol = Solution()
 print(sol.hasSameDigits(s))

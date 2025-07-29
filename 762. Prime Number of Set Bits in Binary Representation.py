@@ -19,8 +19,26 @@ right = 10
 # --- My solution
 class Solution:
     def countPrimeSetBits(self, left: int, right: int) -> int:
-        # Will work on it tomorrow
-        pass
+        def is_prime(p):
+            if p <= 1:
+                return False
+            if p <= 3:
+                return True
+            if p % 2 == 0 or p % 3 == 0:
+                return False
+            
+            i = 5
+            while i * i <= p:
+                if p % i == 0 or p % (i + 2) == 0:
+                    return False
+                i += 6
+            return True
+        c = 0
+        for j in range(left, right + 1):
+            x = bin(j).count("1")
+            if is_prime(x):
+                c += 1
+        return c
 # --- Test
 sol = Solution()
 print(sol.countPrimeSetBits(left, right))

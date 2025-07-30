@@ -26,7 +26,6 @@ class Solution:
             seen.add(n)
             n = sum(int(d)**2 for d in str(n))
         return True        
-
 # --- Test
 sol = Solution()
 print(sol.isHappy(n))

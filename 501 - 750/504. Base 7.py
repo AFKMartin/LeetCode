@@ -24,5 +24,6 @@ class Solution:
             return "-" + "".join(reversed(c))
         else:
             return "".join(reversed(c))
+# --- Test
 sol = Solution()
 print(sol.convertToBase7(num))

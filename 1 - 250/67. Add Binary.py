@@ -22,7 +22,7 @@ class Solution:
         res = "".join(str(d) for d in ans)
 
         return res.lstrip("0") or "0"
-    # Yeah there is a easier version usin bit
+    # Yeah there is a easier version using bin
 # --- Test
 sol = Solution()
 print(sol.addBinary(a,b))

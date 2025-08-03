@@ -25,10 +25,10 @@ def build_linked_list(values):
     if not values:
         return None
     head = ListNode(values[0])
-    current = head
+    c = head
     for val in values[1:]:
-        current.next = ListNode(val)
-        current = current.next
+        c.next = ListNode(val)
+        c = c.next
     return head
 
 def linked_list_to_list(head):

@@ -19,7 +19,6 @@ root.left.left = None
 root.left.right = None
 root.right.left = TreeNode(15)
 root.right.right = TreeNode(7)
-
 # --- My solution
 class Solution:
     def isBalanced(self, root):

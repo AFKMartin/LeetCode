@@ -23,7 +23,6 @@ class Solution:
                 right = mid - 1
         
         return left
-      
 # --- Test
 sol = Solution()
 print(sol.searchInsert(nums, target))

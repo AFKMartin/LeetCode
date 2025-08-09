@@ -32,8 +32,7 @@ class Solution:
             cur_row += 1 if down else -1
         
         return "".join(row)
-
-        
+   
 # --- Test
 sol = Solution()
 print(sol.convert(s, numRows))

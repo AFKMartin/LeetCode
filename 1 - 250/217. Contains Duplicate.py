@@ -5,12 +5,11 @@
 # Output: true
 # Explanation:
 # The element 1 occurs at the indices 0 and 3.
-from typing import List
 nums = [1,2,3,1]
 nums2 = [1,2,3,4]
 # --- My Solution
 class Solution:
-    def containsDuplicate(self, nums: List[int]) -> bool:
+    def containsDuplicate(self, nums) -> bool:
         hs = set() 
 
         for n in nums:           

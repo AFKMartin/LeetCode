@@ -15,7 +15,7 @@ class Solution:
             if n in c and i - c[n] <= k:
                 return True
             c[n] = i
-        return False
+        return False 
 
 # --- Test
 sol = Solution()

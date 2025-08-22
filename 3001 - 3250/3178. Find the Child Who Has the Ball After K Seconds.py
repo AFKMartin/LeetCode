@@ -14,9 +14,9 @@ class Solution:
         c = 2 * (n - 1)
         t = k % c
         if t < n:
-              return t + 1
+            return t
         else:
-              return 2*n - 1 - t
+            return 2*(n - 1) - t
 # --- Test
 sol = Solution()
 print(sol.numberOfChild(n, k))

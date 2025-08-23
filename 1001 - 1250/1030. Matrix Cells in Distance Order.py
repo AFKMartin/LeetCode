@@ -8,7 +8,7 @@
 # Input: rows = 1, cols = 2, rCenter = 0, cCenter = 0
 # Output: [[0,0],[0,1]]
 # Explanation: The distances from (0, 0) to other cells are: [0,1]
-rows = 1 
+rows = 1
 cols = 2
 rCenter = 0
 cCenter = 0
@@ -16,7 +16,6 @@ cCenter = 0
 class Solution:
     def allCellsDistOrder(self, rows: int, cols: int, rCenter: int, cCenter: int):
         c = [(r, c) for r in range(rows) for c in range(cols)]
-        print(c)
 
         c.sort(key=lambda x: abs(x[0] - rCenter) + abs(x[1] - cCenter))
 

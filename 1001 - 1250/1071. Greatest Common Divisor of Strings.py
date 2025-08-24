@@ -22,7 +22,7 @@ class Solution:
             return ""
         
         lngt = gcd(len(str1), len(str2))
-        return lngt
+        
         return str1[:lngt]
 
 # --- Test

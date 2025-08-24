@@ -22,7 +22,7 @@ class Solution:
                     is_prime[j] = False
         p = sum(is_prime)
 
-        permutations = math.factorial(p) * math.factorial((n - p))
+        permutations = math.factorial(p) * math.factorial((n - p)) % MOD
 
         return permutations        
 # --- Test

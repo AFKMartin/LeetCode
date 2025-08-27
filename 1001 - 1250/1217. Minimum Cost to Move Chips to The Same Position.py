@@ -18,7 +18,7 @@ class Solution:
     def minCostToMoveChips(self, position) -> int:
         odd = sum(p % 2 for p in position)
         even = len(position) - odd
-
+        # print(odd)
         return min(odd, even)
 # --- Test
 sol = Solution()

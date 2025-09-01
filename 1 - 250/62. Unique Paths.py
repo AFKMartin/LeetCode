@@ -15,8 +15,6 @@ class Solution:
         x = math.factorial(m + n - 2)
         y = math.factorial(m - 1) * math.factorial(n - 1)
         return x//y
-         
-
 # --- Test
 sol = Solution()
 print(sol.uniquePaths(m, n))

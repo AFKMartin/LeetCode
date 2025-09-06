@@ -23,7 +23,7 @@ class Solution:
         sign = 1 # 1 for positive -1 for negative
         i = 0
 
-        while i < len(s): # loop through s
+        while i < len(s): # loop through the chars of s
             char = s[i]
 
             if char.isdigit():  # check if the character is a digit (0-9)
@@ -31,8 +31,8 @@ class Solution:
                 while i < len(s) and s[i].isdigit():  # build the full number if it has multiple digits
                     num = num * 10 + int(s[i])  # shift previous digits left and add current digit
                     i += 1  # move to the next character
-                res += sign * num  # add the number to the result with its sign (+/-)
-                continue  # skip the i increment at the end of the main loop since we already moved i
+                res += sign * num
+                continue  
 
             elif char == "+":
                 sign = 1 # checks if the symbol is positive (+), if so, sign is 1

@@ -16,10 +16,9 @@
 # Input: tokens = ["4","13","5","/","+"]
 # Output: 6
 # Explanation: (4 + (13 / 5)) = 6
-from typing import List
 # --- My solution
 class Solution:
-    def evalRPN(self, tokens: List[str]) -> int:
+    def evalRPN(self, tokens) -> int:
         stack = []
         for t in tokens:
             if t == "+":

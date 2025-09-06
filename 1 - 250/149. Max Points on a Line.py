@@ -21,6 +21,7 @@ class Solution:
             duplicates = 0
             maximum = 0
 
+            # Checks for duplicates
             for j in range(i + 1, n):
                 x1, y1 = points[i]
                 x2, y2 = points[j]
@@ -31,7 +32,7 @@ class Solution:
                 if dx == 0 and dy == 0:
                     duplicates += 1
                     continue
-
+                # simplifying slopes
                 g = math.gcd(dx, dy)
                 dx //= g
                 dy //= g

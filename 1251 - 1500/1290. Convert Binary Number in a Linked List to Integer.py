@@ -17,11 +17,11 @@ head = [1,0,1]
 #         self.next = next
 class Solution:
     def getDecimalValue(self, head) -> int:
-        bits = []
+        bits = [] 
         while head:
             bits.append(str(head.val))  # store as string directly
             head = head.next
-        return int("".join(bits), 2)       
+        return int("".join(bits), 2) # convert to decimal       
 # --- Test
 sol = Solution()
 print(sol.getDecimalValue(head))

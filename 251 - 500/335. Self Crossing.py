@@ -28,4 +28,4 @@ class Solution:
         return False # anything outside these 3 cases will be false.
 # --- Test
 sol = Solution()
-print(sol.isSelfCrossing(distance))
+print(sol.isSelfCrossing(distance)) 

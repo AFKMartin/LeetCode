@@ -8,7 +8,7 @@
 a = 1
 b = 2
 # --- My solution
-import math
+# import math
 class Solution:
     def getSum(self, a: int, b: int) -> int:
         MASK = 0xFFFFFFFF

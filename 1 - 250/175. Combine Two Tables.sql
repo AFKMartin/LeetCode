@@ -11,11 +11,11 @@ Truncate table Address
 insert into Address (addressId, personId, city, state) values ('1', '2', 'New York City', 'New York')
 insert into Address (addressId, personId, city, state) values ('2', '3', 'Leetcode', 'California')
 -- Solution
-SELECT 
-    p.firstName,
+SELECT -- SELECT everything the problem asks for: firstname, lastname, city, state
+    p.firstName, 
     p.lastName,
     a.city,
     a.state
-FROM Person p
-LEFT JOIN Address a
-    ON p.personId = a.personId;
+FROM Person p -- take every person from the Person table
+LEFT JOIN Address a -- keep all people, even if they don’t have an address
+    ON p.personId = a.personId; -- match addresses by personId

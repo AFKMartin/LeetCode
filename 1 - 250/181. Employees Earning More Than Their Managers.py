@@ -12,8 +12,5 @@ def find_employees(employee: pd.DataFrame) -> pd.DataFrame:
     merge = df.merge(df, left_on="managerId", right_on="id", suffixes=("_emp", "_man"))
     merge = merge[merge["salary_emp"] > merge["salary_man"]]
     return merge[["name_emp"]].rename(columns={"name_emp": "Employee"})
-
-
-
 # --- Test
 print(find_employees(employee))

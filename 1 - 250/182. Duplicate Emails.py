@@ -26,5 +26,6 @@ def duplicate_emails(person: pd.DataFrame) -> pd.DataFrame:
         .query("count > 1")[["email"]]
     )
     return res
+
 # -- Test
 print(duplicate_emails(person))

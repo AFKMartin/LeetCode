@@ -1,0 +1,57 @@
+# https://leetcode.com/problems/available-captures-for-rook/description/
+# You are given an 8 x 8 matrix representing a chessboard. There is exactly one white rook represented by 'R', some number of white bishops 'B', and some number of black pawns 'p'. Empty squares are represented by '.'.
+# A rook can move any number of squares horizontally or vertically (up, down, left, right) until it reaches another piece or the edge of the board. A rook is attacking a pawn if it can move to the pawn's square in one move.
+# Note: A rook cannot move through other pieces, such as bishops or pawns. This means a rook cannot attack a pawn if there is another piece blocking the path.
+# Return the number of pawns the white rook is attacking.
+
+# Example 1:
+
+# Input: board = 
+# [[".",".",".",".",".",".",".","."],
+# [".",".",".","p",".",".",".","."],
+# [".",".",".","R",".",".",".","p"],
+# [".",".",".",".",".",".",".","."],
+# [".",".",".",".",".",".",".","."],
+# [".",".",".","p",".",".",".","."],
+# [".",".",".",".",".",".",".","."],
+# [".",".",".",".",".",".",".","."]]
+# Output: 3
+# Explanation:
+# In this example, the rook is attacking all the pawns.
+board = [[".",".",".",".",".",".",".","."],
+[".",".",".","p",".",".",".","."],
+[".",".",".","R",".",".",".","p"],
+[".",".",".",".",".",".",".","."],
+[".",".",".",".",".",".",".","."],
+[".",".",".","p",".",".",".","."],
+[".",".",".",".",".",".",".","."],
+[".",".",".",".",".",".",".","."]]
+# --- My solution
+class Solution:
+    def numRookCaptures(self, board) -> int:
+        # Define all directions
+        directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+        c = 0
+        # find the rook
+        for i in range(8):
+            for j in range(8):
+                if board[i][j] == "R":
+                    x, y = i, j
+                    break
+        # return x, y
+        # explore each direction
+        for dx, dy in directions:
+            nx, ny = x + dx, y + dy
+            while 0 <= nx < 8 and 0 <= ny < 8:
+                if board[nx][ny] == "B": # Bishop found
+                    break
+                if board[nx][ny] == "p": # Pawn found
+                    c += 1 # Add it to captures
+                    break
+                nx += dx
+                ny += dy
+        return c # return all captures
+
+# --- Test
+sol = Solution()
+print(sol.numRookCaptures(board))

@@ -24,7 +24,6 @@ class ListNode:
         return f"{self.val}->{self.next}"
 # --- My solution
 import heapq
-
 class Solution:
     def mergeKLists(self, lists):
         heap = []

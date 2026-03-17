@@ -1,0 +1,26 @@
+# https://leetcode.com/problems/alternating-digit-sum/description
+# You are given a positive integer n. Each digit of n has a sign according to the following rules:
+# The most significant digit is assigned a positive sign.
+# Each other digit has an opposite sign to its adjacent digits.
+# Return the sum of all digits with their corresponding sign.
+
+# Example 1:
+
+# Input: n = 521
+# Output: 4
+# Explanation: (+5) + (-2) + (+1) = 4.
+n = 111
+# --- My solution
+class Solution:
+    def alternateDigitSum(self, n):
+        sign = 1
+        res = 0
+
+        for d in str(n):
+            res += sign * int(d)
+            sign *= -1
+        return res
+    
+# --- Test
+sol = Solution()        
+print(sol.alternateDigitSum(n))

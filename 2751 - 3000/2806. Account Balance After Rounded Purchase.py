@@ -16,7 +16,7 @@
 purchaseAmount = 15
 # --- My solution
 class Solution:
-    def accountBalanceAfterPurchase(self, purchaseAmount: int) -> int:
+    def accountBalanceAfterPurchase(self, purchaseAmount):
         return 100 - ((purchaseAmount + 5) // 10) * 10  
 # --- Test
 sol = Solution()
